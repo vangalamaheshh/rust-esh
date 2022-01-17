@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+
+  rust-esh:
+    container_name: rust-esh
+    image: rust-esh:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    user: root
+    command: ["tail", "-f", "/dev/null"]
+    volumes:
+      - "./:/mnt"
