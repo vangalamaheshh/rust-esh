@@ -2,13 +2,15 @@ version: "3.4"
 
 services:
 
-  rust-esh:
-    container_name: rust-esh
-    image: rust-esh:latest
+  rust-esh-cean:
+    container_name: rust-esh-cean
+    image: rust-esh-cean:latest
     build:
       context: ./
       dockerfile: Dockerfile
     user: root
     command: ["tail", "-f", "/dev/null"]
+    ports:
+      - "8080:8080"
     volumes:
       - "./:/mnt"

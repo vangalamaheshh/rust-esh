@@ -8,7 +8,7 @@ RUN set -ex \
   && apt-get update -y \
   && apt-get upgrade -y \
   && apt-get install -y build-essential \
-  && apt-get install -y curl vim
+  && apt-get install -y curl vim less git
 
 RUN set -ex \
   && apt-get update -y 
