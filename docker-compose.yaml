@@ -14,3 +14,10 @@ services:
       - "8080:8080"
     volumes:
       - "./:/mnt"
+    networks:
+      - rust-net
+
+networks:
+  rust-net:
+    external: true
+  
