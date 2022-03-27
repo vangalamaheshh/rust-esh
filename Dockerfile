@@ -24,6 +24,10 @@ ENV PATH "/root/.cargo/bin:${PATH}"
 RUN set -ex \
   && cargo install cargo-edit
 
+# install nu-shell
+RUN set -ex \
+  && cargo install nu --features=extra
+
 WORKDIR /mnt
 
 CMD ["tail", "-f", "/dev/null"]
